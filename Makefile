@@ -9,7 +9,11 @@ SRCS = src/main.c \
        src/ft_free.c \
        src/len.c \
        src/push.c \
-       src/swap.c
+       src/swap.c \
+       src/rotate.c \
+       src/rrotate.c \
+       src/change_index.c \
+       src/algo.c 
 
 OBJS = $(SRCS:.c=.o)
 

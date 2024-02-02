@@ -1,39 +1,54 @@
 #include "../include/push_swap.h"
 
-void	sa(t_head *a, t_head *b)
+void	sa(t_head *a, t_head *b, int to_aff)
 {
-	t_stack	*tmp;
+	t_stack	*old_first;
 	t_stack	*last;
 
 	(void)b;
-	if (len(a) <= 1)
+	if (a->first == NULL || a->first->next == a->first)
 		return ;
-	last = get_last(a);
-	tmp = a->first;
+	last = a->first->before;
+	old_first = a->first;
 	a->first = a->first->next;
+	last->next = a->first;
 	a->first->before = last;
-	tmp->next = a->first->next;
-	a->first->next->before = tmp;
-	a->first->next = tmp;
-	tmp->before = a->first;
-	ft_printf("sa\n");
+	old_first->next = a->first->next;
+	a->first->next->before = old_first;
+	a->first->next = old_first;
+	old_first->before = a->first;
+	old_first->index = 1;
+	a->first->index = 0;
+	if (to_aff)
+		ft_printf("sa\n");
 }
 
-void	sb(t_head *a, t_head *b)
+void	sb(t_head *a, t_head *b, int to_aff)
 {
-	t_stack	*tmp;
+	t_stack	*old_first;
 	t_stack	*last;
 
 	(void)a;
-	if (len(b) <= 1)
+	if (a->first == NULL || a->first->next == a->first)
 		return ;
-	last = get_last(b);
-	tmp = b->first;
+	last = b->first->before;
+	old_first = b->first;
 	b->first = b->first->next;
+	last->next = b->first;
 	b->first->before = last;
-	tmp->next = b->first->next;
-	b->first->next->before = tmp;
-	b->first->next = tmp;
-	tmp->before = b->first;
-	ft_printf("sb\n");
+	old_first->next = b->first->next;
+	b->first->next->before = old_first;
+	b->first->next = old_first;
+	old_first->before = b->first;
+	old_first->index = 1;
+	a->first->index = 0;
+	if (to_aff)
+		ft_printf("sb\n");
+}
+
+void	ss(t_head *a, t_head *b)
+{
+	sa(a, b, 0);
+	sb(a, b, 0);
+	ft_printf("ss\n");
 }

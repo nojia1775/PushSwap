@@ -16,12 +16,25 @@ int		len(t_head *head);
 t_stack	*get_last(t_head *head);
 void	pa(t_head *a, t_head *b);
 void	pb(t_head *a, t_head *b);
-void	sa(t_head *a, t_head *b);
-void	sb(t_head *a, t_head *b);
+void	sa(t_head *a, t_head *b, int to_aff);
+void	sb(t_head *a, t_head *b, int to_aff);
+void	ss(t_head *a, t_head *b);
+void	ra(t_head *a, t_head *b, int to_aff);
+void	rb(t_head *a, t_head *b, int to_aff);
+void	rr(t_head *a, t_head *b);
+void	rra(t_head *a, t_head *b, int to_aff);
+void	rrb(t_head *a, t_head *b, int to_aff);
+void	rrr(t_head *a, t_head *b);
+int		until_first(t_head *head, t_stack *new);
+void	lower_all(t_head *head);
+void	upper_all(t_head *head);
+void	algo(t_head *a, t_head *b);
 
 struct	s_stack
 {
 	int	data;
+	int	index;
+	t_stack	*target;
 	t_stack	*next;
 	t_stack	*before;
 };

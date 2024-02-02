@@ -30,7 +30,9 @@ int	main(int argc, char **argv)
 	while (i++ < argc - 2)
 		add_list(ft_atoi(argv[i + 1]), a);
 	aff(a, b, argc - 1);
-	sa(a, b);
+	pb(a, b);
+	pb(a, b);
+	algo(a, b);
 	aff(a, b, argc - 1);
 	ft_free(a, b);
 	return (0);

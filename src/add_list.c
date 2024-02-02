@@ -12,6 +12,18 @@ t_stack	*get_last(t_head *head)
 	return (cur);
 }
 
+int	until_first(t_head *head, t_stack *new)
+{
+	int		i;
+	t_stack	*cur;
+
+	i = 0;
+	cur = new;
+	while (cur != head->first && ++i)
+		cur = cur->before;
+	return (i);
+}
+
 void	add_list(int data, t_head *head)
 {
 	t_stack	*new;
@@ -27,6 +39,8 @@ void	add_list(int data, t_head *head)
 		head->first = new;
 		new->next = new;
 		new->before = new;
+		new->target = NULL;
+		new->index = 0;
 	}
 	else
 	{
@@ -34,5 +48,7 @@ void	add_list(int data, t_head *head)
 		new->next = head->first;
 		new->before = last;
 		head->first->before = new;
+		new->target = NULL;
+		new->index = until_first(head, new);
 	}
 }

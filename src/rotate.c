@@ -1,0 +1,32 @@
+#include "../include/push_swap.h"
+
+void	ra(t_head *a, t_head *b, int to_aff)
+{
+	(void)b;
+	if (a->first == NULL || a->first->next == a->first)
+		return ;
+	a->first = a->first->next;
+	lower_all(a);
+	a->first->before->index = a->first->before->before->index + 1;
+	if (to_aff)
+		ft_printf("ra\n");
+}
+
+void	rb(t_head *a, t_head *b, int to_aff)
+{
+	(void)a;
+	if (b->first == NULL || b->first->next == a->first)
+		return ;
+	b->first = b->first->next;
+	lower_all(b);
+	b->first->before->index = b->first->before->before->index + 1;
+	if (to_aff)
+		ft_printf("rb\n");
+}
+
+void	rr(t_head *a, t_head *b)
+{
+	ra(a, b, 0);
+	rb(a, b, 0);
+	ft_printf("rr\n");
+}

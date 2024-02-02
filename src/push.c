@@ -13,6 +13,8 @@ static void	add_front(int data, t_head *head)
 		head->first = new;
 		new->next = new;
 		new->before = new;
+		new->target = NULL;
+		new->index = 0;
 	}
 	else
 	{
@@ -21,6 +23,9 @@ static void	add_front(int data, t_head *head)
 		head->first->before->next = new;
 		head->first->before = new;
 		head->first = new;
+		new->target = NULL;
+		upper_all(head);
+		new->index = 0;
 	}
 }
 
@@ -43,6 +48,7 @@ void	pa(t_head *a, t_head *b)
 		b->first->next->before = b->first->before;
 		b->first = b->first->next;
 		free(tmp);
+		lower_all(b);
 	}
 	ft_printf("pa\n");
 }
@@ -66,6 +72,7 @@ void	pb(t_head *a, t_head *b)
 		a->first->next->before = a->first->before;
 		a->first = a->first->next;
 		free(tmp);
+		lower_all(a);
 	}
 	ft_printf("pb\n");
 }
