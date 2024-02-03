@@ -29,6 +29,9 @@ int		until_first(t_head *head, t_stack *new);
 void	lower_all(t_head *head);
 void	upper_all(t_head *head);
 void	algo(t_head *a, t_head *b);
+unsigned int		ft_abs(int n);
+int		isthelil(t_stack *stack, t_head *head);
+int		thelow(int a, int b);
 
 struct	s_stack
 {
