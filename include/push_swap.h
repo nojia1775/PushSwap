@@ -7,6 +7,7 @@
 
 typedef struct s_stack	t_stack;
 typedef struct s_head	t_head;
+typedef struct s_cost	t_cost;
 
 int		verif_param(char **argv);
 void	aff(t_head *a, t_head *b, int size);
@@ -34,6 +35,12 @@ int		isthelil(t_stack *stack, t_head *head);
 int		thelow(int a, int b);
 void	issort(t_head *a, t_head *b);
 void	trois(t_head *a, t_head *b);
+
+struct	s_cost
+{
+	int		cout;
+	t_stack	*elem;
+};
 
 struct	s_stack
 {

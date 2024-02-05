@@ -76,7 +76,10 @@ static void	target(t_head *a, t_head *b)
 static void	algo2(t_head *a, t_head *b)
 {
 	t_stack	*cur;
+	t_cost	prix;
 
+	prix.cout = 0;
+	prix.elem = NULL;
 	cur = a->first;
 	while (a->first->before->index != 2)
 	{
@@ -88,6 +91,11 @@ static void	algo2(t_head *a, t_head *b)
 		}
 		else
 		{
+			if (prix.cout == 0 || cost(cur, a, b) < prix.cout)
+			{
+				prix.cout = cost(cur, a, b);
+				prix.elem = cur;
+			}
 			cur = cur->next;
 			if (cur == a->first)
 				break ;

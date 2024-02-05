@@ -1,5 +1,14 @@
 #include "../include/push_swap.h"
 
+static void	deux(t_head *a, t_head *b)
+{
+	if (a->first->next->next != a->first)
+		return ;
+	if (a->first->data > a->first->next->data)
+		sa(a, b, 1);
+	exit(0);
+}
+
 static t_head	*init_head(void)
 {
 	t_head	*stack;
@@ -22,6 +31,8 @@ int	main(int argc, char **argv)
 		ft_printf("Error\n");
 		return (1);
 	}
+	if (argc == 2)
+		return (0);
 	a = init_head();
 	b = init_head();
 	if (!a || !b)
@@ -29,6 +40,7 @@ int	main(int argc, char **argv)
 	i = -1;
 	while (i++ < argc - 2)
 		add_list(ft_atoi(argv[i + 1]), a);
+	deux(a, b);
 	aff(a, b, argc - 1);
 	algo(a, b);
 	aff(a, b, argc - 1);
