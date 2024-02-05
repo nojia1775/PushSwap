@@ -73,25 +73,37 @@ static void	target(t_head *a, t_head *b)
 	}
 }
 
-void	algo(t_head *a, t_head *b)
+static void	algo2(t_head *a, t_head *b)
 {
 	t_stack	*cur;
 
-	pb(a, b);
-	pb(a, b);
-	target(a, b);
 	cur = a->first;
-	while (1)
+	while (a->first->before->index != 2)
 	{
 		if (cost(cur, a, b) == 1)
 		{
 			pb(a, b);
 			cur = a->first;
+			target(a, b);
 		}
 		else
+		{
 			cur = cur->next;
-		target(a, b);
-		if (cur == a->first)
-			break ;
+			if (cur == a->first)
+				break ;
+		}
 	}
+}
+
+void	algo(t_head *a, t_head *b)
+{
+	trois(a, b);
+	issort(a, b);
+	pb(a, b);
+	pb(a, b);
+	target(a, b);
+	algo2(a, b);
+	if (a->first->before->index == 2)
+		trois(a, b);
+	target(b, a);
 }

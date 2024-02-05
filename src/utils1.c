@@ -40,3 +40,22 @@ int	isthelil(t_stack *stack, t_head *head)
 	stack->target = cur;
 	return (1);
 }
+
+void	issort(t_head *a, t_head *b)
+{
+	t_stack	*cur;
+
+	if (b->first != NULL)
+		return ;
+	cur = a->first;
+	while (1)
+	{
+		if (cur->data > cur->next->data)
+			return ;
+		cur = cur->next;
+		if (cur == a->first->before)
+			break ;
+	}
+	aff(a, b, 3);
+	exit(0);
+}

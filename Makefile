@@ -14,7 +14,8 @@ SRCS = src/main.c \
        src/rrotate.c \
        src/change_index.c \
        src/algo.c  \
-       src/utils1.c
+       src/utils1.c \
+       src/trois.c
 
 OBJS = $(SRCS:.c=.o)
 

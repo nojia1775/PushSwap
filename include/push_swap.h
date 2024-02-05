@@ -32,6 +32,8 @@ void	algo(t_head *a, t_head *b);
 unsigned int		ft_abs(int n);
 int		isthelil(t_stack *stack, t_head *head);
 int		thelow(int a, int b);
+void	issort(t_head *a, t_head *b);
+void	trois(t_head *a, t_head *b);
 
 struct	s_stack
 {
