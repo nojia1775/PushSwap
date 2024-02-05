@@ -97,8 +97,9 @@ static void	algo2(t_head *a, t_head *b)
 			}
 			cur = cur->next;
 			if (cur == a->first)
-				dep(a, b, prix);
+				dep(a, b, &prix);
 		}
+		aff(a, b, 9);
 	}
 }
 

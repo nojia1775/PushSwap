@@ -7,7 +7,7 @@ int	thelow(int a, int b)
 	return (b);
 }
 
-unsigned int	ft_abs(int n)
+int	ft_abs(int n)
 {
 	if (n < 0)
 		return (-n);
