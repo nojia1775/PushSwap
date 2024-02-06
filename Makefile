@@ -16,7 +16,13 @@ SRCS = src/main.c \
        src/algo.c  \
        src/utils1.c \
        src/trois.c \
-       src/dep.c
+       src/dep.c \
+       src/algo2b.c \
+       src/utils2.c \
+       src/algo2b.c \
+       src/depb.c \
+       src/exp.c \
+       src/calibrage.c
 
 OBJS = $(SRCS:.c=.o)
 

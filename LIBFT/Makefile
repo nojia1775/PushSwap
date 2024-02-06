@@ -6,7 +6,7 @@
 #    By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 11:11:55 by nadjemia          #+#    #+#              #
-#    Updated: 2024/01/12 13:57:08 by nadjemia         ###   ########.fr        #
+#    Updated: 2024/02/06 10:59:52 by nadjemia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,8 +44,6 @@ SRCS = ft_atoi.c \
        ft_substr.c \
        ft_tolower.c \
        ft_toupper.c \
-       get_next_line.c \
-       get_next_line_utils.c 
 
 OBJS = $(SRCS:.c=.o)
 

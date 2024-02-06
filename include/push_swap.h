@@ -36,6 +36,15 @@ int		thelow(int a, int b);
 void	issort(t_head *a, t_head *b);
 void	trois(t_head *a, t_head *b);
 void	dep(t_head *a, t_head *b, t_cost *prix);
+void	algo2b(t_head *b, t_head *a);
+int		cost(t_stack *stack, t_head *a, t_head *b);
+void	target(t_head *a, t_head *b);
+void	targetb(t_head *b, t_head *a);
+int		isthebig(t_stack *stack, t_head *head);
+void	depb(t_head *b, t_head *a, t_cost *prix);
+void	expb(t_cost *prix, t_stack **cur, t_head *a, t_head *b);
+void	expa(t_cost *prix, t_stack **cur, t_head *a, t_head *b);
+void	calibrage(t_head *a, t_head *b);
 
 struct	s_cost
 {

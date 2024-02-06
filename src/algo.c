@@ -1,12 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algo.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/06 17:36:01 by nadjemia          #+#    #+#             */
+/*   Updated: 2024/02/06 17:58:53 by nadjemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
-static int	cost(t_stack *stack, t_head *a, t_head *b)
+int	cost(t_stack *stack, t_head *a, t_head *b)
 {
 	int	costa;
 	int	costb;
 	int	same;
 
 	same = 0;
+	if (stack->index == 0 && stack->target->index == 0)
+		return (1);
 	if (stack->index > a->first->before->index / 2 + 1)
 		costa = ft_abs(stack->index - a->first->before->index + 1);
 	else
@@ -47,10 +61,10 @@ static int	targeting(t_stack *cura, t_stack *curb, t_head *b)
 				cura->target = curb;
 		}
 	}
-	return (0);
+	return (0);	
 }
 
-static void	target(t_head *a, t_head *b)
+void	target(t_head *a, t_head *b)
 {
 	t_stack	*cura;
 	t_stack	*curb;
@@ -73,7 +87,7 @@ static void	target(t_head *a, t_head *b)
 	}
 }
 
-static void	algo2(t_head *a, t_head *b)
+static void	algo2a(t_head *a, t_head *b)
 {
 	t_stack	*cur;
 	t_cost	prix;
@@ -82,24 +96,16 @@ static void	algo2(t_head *a, t_head *b)
 	cur = a->first;
 	while (a->first->before->index != 2)
 	{
+		aff(a, b, 10);
 		if (cost(cur, a, b) == 1)
 		{
 			pb(a, b);
 			cur = a->first;
 			target(a, b);
+			aff(a, b, 10);
 		}
 		else
-		{
-			if (prix.cout == 0 || cost(cur, a, b) < prix.cout)
-			{
-				prix.cout = cost(cur, a, b);
-				prix.elem = cur;
-			}
-			cur = cur->next;
-			if (cur == a->first)
-				dep(a, b, &prix);
-		}
-		aff(a, b, 9);
+			expa(&prix, &cur, a, b);
 	}
 }
 
@@ -108,10 +114,14 @@ void	algo(t_head *a, t_head *b)
 	trois(a, b);
 	issort(a, b);
 	pb(a, b);
-	pb(a, b);
+	if (a->first->before->index > 3)
+		pb(a, b);
 	target(a, b);
-	algo2(a, b);
+	algo2a(a, b);
 	if (a->first->before->index == 2)
 		trois(a, b);
-	target(b, a);
+	targetb(b, a);
+	aff(a, b, 10);
+	algo2b(b, a);
+	calibrage(a, b);
 }
