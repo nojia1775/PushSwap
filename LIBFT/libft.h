@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:57:44 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/01/12 13:56:31 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/06 10:58:13 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
-char		*get_next_line(int fd);
 
 typedef struct s_list
 {
