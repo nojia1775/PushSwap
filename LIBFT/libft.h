@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:57:44 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/06 10:58:13 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/06 10:59:04 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
-# include "get_next_line.h"
 
 typedef struct s_list	t_list;
 int			ft_atoi(const char *nptr);
