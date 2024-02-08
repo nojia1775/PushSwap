@@ -42,7 +42,7 @@ static char	***init_params(int argc, char **argv)
 	params = (char ***)malloc(sizeof(char **) * argc);
 	if (!params)
 		return (NULL);
-	params[argc] = NULL;
+	params[argc - 1] = NULL;
 	while (argv[i])
 	{
 		params[i - 1] = ft_split(argv[i], ' ');
@@ -91,9 +91,9 @@ int	main(int argc, char **argv)
 	add_to_list(params, a);
 	free_params(params);
 	deux(a, b);
-	aff(a, b, argc - 1);
+	//aff(a, b, 10);a, b, argc - 1);
 	algo(a, b);
-	aff(a, b, argc - 1);
+	//aff(a, b, 10);a, b, argc - 1);
 	ft_free(a, b);
 	return (0);
 }

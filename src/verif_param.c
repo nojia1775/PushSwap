@@ -25,7 +25,7 @@ static int	same(char ***params, int int_j, int i, int j)
 		while (params[l][k])
 		{
 			int_k = ft_atoi(params[l][k++]);
-			ft_printf("%d != %d\n", int_j, int_k);
+			//ft_printf("%d != %d\n", int_j, int_k);
 			if (int_j == int_k && (j != k || l != i))
 				return (0);
 		}

@@ -51,7 +51,7 @@ void	pa(t_head *a, t_head *b)
 		lower_all(b);
 	}
 	ft_printf("pa\n");
-	aff(a, b, 9);
+	//aff(a, b, 10);a, b, 9);
 }
 
 void	pb(t_head *a, t_head *b)
@@ -76,5 +76,5 @@ void	pb(t_head *a, t_head *b)
 		lower_all(a);
 	}
 	ft_printf("pb\n");
-	aff(a, b, 9);
+	//aff(a, b, 10);a, b, 9);
 }

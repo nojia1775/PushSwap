@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   calibrage.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/08 17:10:58 by nadjemia          #+#    #+#             */
+/*   Updated: 2024/02/08 17:14:07 by nadjemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 static t_stack	*little(t_head *head)
@@ -8,6 +20,7 @@ static t_stack	*little(t_head *head)
 
 	cur = head->first;
 	tmp = cur->data;
+	add = cur;
 	while (1)
 	{
 		if (cur->data < tmp)

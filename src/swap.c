@@ -21,7 +21,7 @@ void	sa(t_head *a, t_head *b, int to_aff)
 	a->first->index = 0;
 	if (to_aff)
 		ft_printf("sa\n");
-	aff(a, b, 9);
+	//aff(a, b, 10);a, b, 9);
 }
 
 void	sb(t_head *a, t_head *b, int to_aff)
@@ -45,7 +45,7 @@ void	sb(t_head *a, t_head *b, int to_aff)
 	a->first->index = 0;
 	if (to_aff)
 		ft_printf("sb\n");
-	aff(a, b, 9);
+	//aff(a, b, 10);a, b, 9);
 }
 
 void	ss(t_head *a, t_head *b)
@@ -53,5 +53,5 @@ void	ss(t_head *a, t_head *b)
 	sa(a, b, 0);
 	sb(a, b, 0);
 	ft_printf("ss\n");
-	aff(a, b, 9);
+	//aff(a, b, 10);a, b, 9);
 }
