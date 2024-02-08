@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/08 15:08:02 by nadjemia          #+#    #+#             */
+/*   Updated: 2024/02/08 15:40:49 by nadjemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
-/*
 static void	deux(t_head *a, t_head *b)
 {
 	if (a->first->next->next != a->first)
@@ -20,7 +31,7 @@ static t_head	*init_head(void)
 	stack->first = NULL;
 	return (stack);
 }
-*/
+
 
 static char	***init_params(int argc, char **argv)
 {
@@ -40,47 +51,49 @@ static char	***init_params(int argc, char **argv)
 	return (params);
 }
 
-int	main(int argc, char **argv)
+void	free_params(char ***params)
 {
-	/*
-	t_head	*a;
-	t_head	*b;
-	*/
-	int		i;
-	char	***params;
+	int	i;
+	int	j;
 
-	params = init_params(argc, argv);
-	if (!params)
-		return (1);
 	i = 0;
-	int j;
 	while (params[i])
 	{
 		j = 0;
 		while (params[i][j])
-		{
-			ft_printf("%s\n", params[i][j]);
-			j++;
-		}
-		i++;
+			free(params[i][j++]);
+		free(params[i++]);
+	}
+	free(params);
+}
+
+int	main(int argc, char **argv)
+{
+	t_head	*a;
+	t_head	*b;
+	char	***params;
+
+	params = init_params(argc, argv);
+	if (!params)
+	{
+		free_params(params);
+		return (1);
 	}
 	if (!verif_param(params))
 	{
-		ft_printf("Error\n");
+		free_params(params);
 		return (1);
 	}
-	/*
 	a = init_head();
 	b = init_head();
 	if (!a || !b)
 		return (2);
-	i = -1;
-	while (i++ < argc - 2)
-		add_list(ft_atoi(argv[i + 1]), a);
+	add_to_list(params, a);
+	free_params(params);
 	deux(a, b);
 	aff(a, b, argc - 1);
 	algo(a, b);
 	aff(a, b, argc - 1);
-	ft_free(a, b);*/
+	ft_free(a, b);
 	return (0);
 }

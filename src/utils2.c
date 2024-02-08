@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:03:18 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/08 10:03:04 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/08 15:34:22 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,19 @@ int	costb(t_stack *stack, t_head *a, t_head *b)
 	if (!same)
 		return (costa + costb + 1);
 	return (thelow(costa, costb) + ft_abs(costa - costb) + 1);
+}
+
+void	add_to_list(char ***params, t_head *a)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (params[i])
+	{
+		j = 0;
+		while (params[i][j])
+			add_list(ft_atoi(params[i][j++]), a);
+		i++;
+	}
 }

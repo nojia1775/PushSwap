@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 09:36:46 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/08 11:54:03 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/08 15:31:53 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void	expb(t_cost *prix, t_stack **cur, t_head *a, t_head *b);
 void	expa(t_cost *prix, t_stack **cur, t_head *a, t_head *b);
 void	calibrage(t_head *a, t_head *b);
 int		costb(t_stack *stack, t_head *a, t_head *b);
+void	add_to_list(char ***params, t_head *a);
 
 struct	s_cost
 {
