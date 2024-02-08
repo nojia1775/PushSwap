@@ -18,9 +18,11 @@ int	isthelil(t_stack *stack, t_head *head)
 {
 	t_stack	*cur;
 	int		big;
+	t_stack	*tmp;
 
 	big = head->first->data;
 	cur = head->first;
+	tmp = cur;
 	while (1)
 	{
 		if (cur->data < stack->data)
@@ -33,11 +35,14 @@ int	isthelil(t_stack *stack, t_head *head)
 	{
 		cur = cur->next;
 		if (cur->data > big)
+		{
 			big = cur->data;
+			tmp = cur;
+		}
 		if (cur == head->first)
 			break ;
 	}
-	stack->target = cur;
+	stack->target = tmp;
 	return (1);
 }
 
@@ -56,6 +61,5 @@ void	issort(t_head *a, t_head *b)
 		if (cur == a->first->before)
 			break ;
 	}
-	aff(a, b, 3);
 	exit(0);
 }

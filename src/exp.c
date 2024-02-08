@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 17:35:55 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/06 17:45:13 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/08 09:32:59 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	expb(t_cost *prix, t_stack **cur, t_head *a, t_head *b)
 		targetb(b, a);
 		prix->cout = 0;
 		prix->elem = NULL;
-		aff(a, b, 10);
 		*cur = b->first;
 	}
 }
@@ -45,6 +44,6 @@ void	expa(t_cost *prix, t_stack **cur, t_head *a, t_head *b)
 		target(a, b);
 		prix->cout = 0;
 		prix->elem = NULL;
-		aff(a, b, 10);
+		*cur = a->first;
 	}
 }

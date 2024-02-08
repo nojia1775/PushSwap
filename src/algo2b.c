@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 17:36:11 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/06 17:46:22 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/08 10:01:02 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void	targetb(t_head *b, t_head *a)
 	t_stack	*cura;
 	t_stack	*curb;
 
+	if (b->first == NULL)
+		return ;
 	cura = a->first;
 	curb = b->first;
 	while (1)
@@ -67,7 +69,7 @@ void	algo2b(t_head *b, t_head *a)
 	cur = b->first;
 	while (b->first != NULL)
 	{
-		if (cost(cur, b, a) == 1)
+		if (costb(cur, b, a) == 1)
 		{
 			pa(a, b);
 			if (b->first != NULL)
@@ -75,7 +77,6 @@ void	algo2b(t_head *b, t_head *a)
 				cur = b->first;
 				targetb(b, a);
 			}
-			aff(a, b, 10);
 		}
 		else
 			expb(&prix, &cur, a, b);

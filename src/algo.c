@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 17:36:01 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/06 17:58:53 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/08 10:09:38 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,13 +96,11 @@ static void	algo2a(t_head *a, t_head *b)
 	cur = a->first;
 	while (a->first->before->index != 2)
 	{
-		aff(a, b, 10);
 		if (cost(cur, a, b) == 1)
 		{
 			pb(a, b);
 			cur = a->first;
 			target(a, b);
-			aff(a, b, 10);
 		}
 		else
 			expa(&prix, &cur, a, b);
@@ -115,13 +113,16 @@ void	algo(t_head *a, t_head *b)
 	issort(a, b);
 	pb(a, b);
 	if (a->first->before->index > 3)
+	{
 		pb(a, b);
-	target(a, b);
-	algo2a(a, b);
+		target(a, b);
+		algo2a(a, b);
+	}
+	else if (a->first->before->index == 3)
+		pb(a, b);
 	if (a->first->before->index == 2)
 		trois(a, b);
 	targetb(b, a);
-	aff(a, b, 10);
 	algo2b(b, a);
 	calibrage(a, b);
 }

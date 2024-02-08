@@ -18,9 +18,9 @@ void	aff(t_head *a, t_head *b, int size)
 		if (i < lim_a)
 		{
 			if (elem_a->target == NULL)
-				ft_printf("%d\t", elem_a->data);
+				ft_printf("%d:nul\t", elem_a->data);
 			else
-				ft_printf("%d\t", elem_a->data);
+				ft_printf("%d:%d\t", elem_a->data, elem_a->target->data);
 			elem_a = elem_a->next;
 		}
 		else
@@ -28,9 +28,9 @@ void	aff(t_head *a, t_head *b, int size)
 		if (i < lim_b)
 		{
 			if (elem_b->target == NULL)
-				ft_printf("%d\n", elem_b->data);
+				ft_printf("%d:null\n", elem_b->data);
 			else
-				ft_printf("%d\n", elem_b->data);
+				ft_printf("%d:%d\n", elem_b->data, elem_b->target->data);
 			elem_b = elem_b->next;
 		}
 		else

@@ -10,6 +10,7 @@ void	rra(t_head *a, t_head *b, int to_aff)
 	a->first->index = 0;
 	if (to_aff)
 		ft_printf("rra\n");
+	aff(a, b, 9);
 }
 
 void	rrb(t_head *a, t_head *b, int to_aff)
@@ -22,6 +23,7 @@ void	rrb(t_head *a, t_head *b, int to_aff)
 	b->first->index = 0;
 	if (to_aff)
 		ft_printf("rrb\n");
+	aff(a, b, 9);
 }
 
 void	rrr(t_head *a, t_head *b)
@@ -29,4 +31,5 @@ void	rrr(t_head *a, t_head *b)
 	rra(a, b, 0);
 	rrb(a, b, 0);
 	ft_printf("rrr\n");
+	aff(a, b, 9);
 }

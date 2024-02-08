@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/08 09:36:46 by nadjemia          #+#    #+#             */
+/*   Updated: 2024/02/08 11:54:03 by nadjemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 
 # define PUSH_SWAP_H
-
+# define SIZE 4
 # include "../FT_PRINTF/ft_printf.h"
 # include "../LIBFT/libft.h"
 
@@ -9,7 +21,7 @@ typedef struct s_stack	t_stack;
 typedef struct s_head	t_head;
 typedef struct s_cost	t_cost;
 
-int		verif_param(char **argv);
+int		verif_param(char ***params);
 void	aff(t_head *a, t_head *b, int size);
 void	add_list(int data, t_head *head);
 void	ft_free(t_head *a, t_head *b);
@@ -45,6 +57,7 @@ void	depb(t_head *b, t_head *a, t_cost *prix);
 void	expb(t_cost *prix, t_stack **cur, t_head *a, t_head *b);
 void	expa(t_cost *prix, t_stack **cur, t_head *a, t_head *b);
 void	calibrage(t_head *a, t_head *b);
+int		costb(t_stack *stack, t_head *a, t_head *b);
 
 struct	s_cost
 {
