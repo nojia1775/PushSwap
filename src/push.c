@@ -1,4 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/09 11:10:44 by nadjemia          #+#    #+#             */
+/*   Updated: 2024/02/09 11:10:45 by nadjemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
+
+// void	pb(t_head *a, t_head *b)
+// {
+// 	t_stack	*tmp;
+
+// 	if (b->first == NULL)
+// 		return ;
+// 	tmp = a->first;
+// 	b->first = a->first;
+// 	a->first->before = 
+// }
+
+// void	pa(t_head*a, t_head *b)
+// {
+// 	t_stack	*tmp;
+
+// 	if (a->first == NULL)
+// 		return ;
+// 	tmp = b->first;
+// 	b->first = a->first;
+// 	a->first->before->next = a->first->next;
+// 	a->first->next->before = a->first->before;
+// 	tmp->before->next = b->first;
+// 	b->first->before = tmp->before;
+// 	b->first->next = tmp;
+// 	tmp->before = b->first;
+// }
+
 
 static void	add_front(int data, t_head *head)
 {
@@ -51,7 +91,7 @@ void	pa(t_head *a, t_head *b)
 		lower_all(b);
 	}
 	ft_printf("pa\n");
-	//aff(a, b, 10);a, b, 9);
+	//aff(a, b, 13);
 }
 
 void	pb(t_head *a, t_head *b)
@@ -76,5 +116,6 @@ void	pb(t_head *a, t_head *b)
 		lower_all(a);
 	}
 	ft_printf("pb\n");
-	//aff(a, b, 10);a, b, 9);
+	//aff(a, b, 13);
 }
+

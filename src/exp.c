@@ -40,8 +40,8 @@ void	expa(t_cost *prix, t_stack **cur, t_head *a, t_head *b)
 	*cur = (*cur)->next;
 	if (*cur == a->first)
 	{
-		dep(a, b, prix);
 		target(a, b);
+		dep(a, b, prix);
 		prix->cout = 0;
 		prix->elem = NULL;
 		*cur = a->first;

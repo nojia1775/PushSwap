@@ -79,8 +79,10 @@ void	dep(t_head *a, t_head *b, t_cost *prix)
 	else
 		mov[0] = prix->elem->index;
 	if (prix->elem->target->index >= b->first->before->index / 2 + 1)
+	{
 		mov[1] = -ft_abs(prix->elem->target->index
 			- b->first->before->index) - 1;
+	}
 	else
 		mov[1] = prix->elem->target->index;
 	if (mov[0] > 0 && mov[1] > 0)

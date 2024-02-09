@@ -6,11 +6,12 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 15:08:02 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/08 15:40:49 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/09 14:15:39 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
 
 static void	deux(t_head *a, t_head *b)
 {
@@ -21,15 +22,16 @@ static void	deux(t_head *a, t_head *b)
 	exit(0);
 }
 
+
 static t_head	*init_head(void)
 {
-	t_head	*stack;
+	t_head	*head;
 
-	stack = (t_head *)malloc(sizeof(*stack));
-	if (!stack)
+	head = (t_head *)malloc(sizeof(*head));
+	if (!head)
 		return (NULL);
-	stack->first = NULL;
-	return (stack);
+	head->first = NULL;
+	return (head);
 }
 
 
@@ -91,9 +93,11 @@ int	main(int argc, char **argv)
 	add_to_list(params, a);
 	free_params(params);
 	deux(a, b);
-	//aff(a, b, 10);a, b, argc - 1);
+	aff(a, b, argc - 1);
 	algo(a, b);
-	//aff(a, b, 10);a, b, argc - 1);
+	aff(a, b, argc - 1);
+	// pb(a, b);
+	// aff(a, b, argc - 1);
 	ft_free(a, b);
 	return (0);
 }

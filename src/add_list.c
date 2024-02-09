@@ -29,7 +29,9 @@ void	add_list(int data, t_head *head)
 	t_stack	*new;
 	t_stack	*last;
 	
-	new = (t_stack *)malloc(sizeof(*new));
+	// new = (t_stack *)malloc(sizeof(*new));
+	new = malloc(sizeof(t_stack));
+
 	if (!new)
 		return ;
 	new->data = data;
