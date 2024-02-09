@@ -1,0 +1,114 @@
+==101920== Memcheck, a memory error detector
+==101920== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==101920== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==101920== Command: ./push_swap 3\ -29\ 34\ -41\ -14\ -9\ 13\ -7\ -10
+==101920== Parent PID: 36388
+==101920== 
+==101920== Invalid read of size 4
+==101920==    at 0x402DDC: dep (dep.c:75)
+==101920==    by 0x403EE3: expa (exp.c:45)
+==101920==    by 0x4029CF: algo2a (algo.c:108)
+==101920==    by 0x4028C2: algo (algo.c:121)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  Address 0x4aa0554 is 4 bytes inside a block of size 32 free'd
+==101920==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101920==    by 0x401EE9: pb (push.c:115)
+==101920==    by 0x40299D: algo2a (algo.c:102)
+==101920==    by 0x4028C2: algo (algo.c:121)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  Block was alloc'd at
+==101920==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101920==    by 0x4018B8: add_list (add_list.c:33)
+==101920==    by 0x4037F9: add_to_list (utils2.c:86)
+==101920==    by 0x4012AD: main (main.c:93)
+==101920== 
+==101920== Invalid read of size 4
+==101920==    at 0x402E3F: dep (dep.c:79)
+==101920==    by 0x403EE3: expa (exp.c:45)
+==101920==    by 0x4029CF: algo2a (algo.c:108)
+==101920==    by 0x4028C2: algo (algo.c:121)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  Address 0x4aa0554 is 4 bytes inside a block of size 32 free'd
+==101920==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101920==    by 0x401EE9: pb (push.c:115)
+==101920==    by 0x40299D: algo2a (algo.c:102)
+==101920==    by 0x4028C2: algo (algo.c:121)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  Block was alloc'd at
+==101920==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101920==    by 0x4018B8: add_list (add_list.c:33)
+==101920==    by 0x4037F9: add_to_list (utils2.c:86)
+==101920==    by 0x4012AD: main (main.c:93)
+==101920== 
+==101920== Invalid read of size 8
+==101920==    at 0x402E4D: dep (dep.c:80)
+==101920==    by 0x403EE3: expa (exp.c:45)
+==101920==    by 0x4029CF: algo2a (algo.c:108)
+==101920==    by 0x4028C2: algo (algo.c:121)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  Address 0x4aa0558 is 8 bytes inside a block of size 32 free'd
+==101920==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101920==    by 0x401EE9: pb (push.c:115)
+==101920==    by 0x40299D: algo2a (algo.c:102)
+==101920==    by 0x4028C2: algo (algo.c:121)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  Block was alloc'd at
+==101920==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101920==    by 0x4018B8: add_list (add_list.c:33)
+==101920==    by 0x4037F9: add_to_list (utils2.c:86)
+==101920==    by 0x4012AD: main (main.c:93)
+==101920== 
+==101920== Invalid read of size 8
+==101920==    at 0x402E85: dep (dep.c:82)
+==101920==    by 0x403EE3: expa (exp.c:45)
+==101920==    by 0x4029CF: algo2a (algo.c:108)
+==101920==    by 0x4028C2: algo (algo.c:121)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  Address 0x4aa0558 is 8 bytes inside a block of size 32 free'd
+==101920==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101920==    by 0x401EE9: pb (push.c:115)
+==101920==    by 0x40299D: algo2a (algo.c:102)
+==101920==    by 0x4028C2: algo (algo.c:121)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  Block was alloc'd at
+==101920==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==101920==    by 0x4018B8: add_list (add_list.c:33)
+==101920==    by 0x4037F9: add_to_list (utils2.c:86)
+==101920==    by 0x4012AD: main (main.c:93)
+==101920== 
+==101920== Invalid read of size 4
+==101920==    at 0x40383C: depb (depb.c:87)
+==101920==    by 0x403DF2: expb (exp.c:26)
+==101920==    by 0x403516: algo2b (algo2b.c:82)
+==101920==    by 0x40292A: algo (algo.c:128)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  Address 0x4 is not stack'd, malloc'd or (recently) free'd
+==101920== 
+==101920== 
+==101920== Process terminating with default action of signal 11 (SIGSEGV)
+==101920==  Access not within mapped region at address 0x4
+==101920==    at 0x40383C: depb (depb.c:87)
+==101920==    by 0x403DF2: expb (exp.c:26)
+==101920==    by 0x403516: algo2b (algo2b.c:82)
+==101920==    by 0x40292A: algo (algo.c:128)
+==101920==    by 0x4012D0: main (main.c:97)
+==101920==  If you believe this happened as a result of a stack
+==101920==  overflow in your program's main thread (unlikely but
+==101920==  possible), you can try to increase the size of the
+==101920==  main thread stack using the --main-stacksize= flag.
+==101920==  The main thread stack size used in this run was 8388608.
+==101920== 
+==101920== HEAP SUMMARY:
+==101920==     in use at exit: 304 bytes in 11 blocks
+==101920==   total heap usage: 29 allocs, 18 frees, 654 bytes allocated
+==101920== 
+==101920== LEAK SUMMARY:
+==101920==    definitely lost: 0 bytes in 0 blocks
+==101920==    indirectly lost: 0 bytes in 0 blocks
+==101920==      possibly lost: 0 bytes in 0 blocks
+==101920==    still reachable: 304 bytes in 11 blocks
+==101920==         suppressed: 0 bytes in 0 blocks
+==101920== Rerun with --leak-check=full to see details of leaked memory
+==101920== 
+==101920== For lists of detected and suppressed errors, rerun with: -s
+==101920== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)

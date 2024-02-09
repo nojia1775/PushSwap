@@ -86,7 +86,7 @@ int	verif_param(char ***params)
 		{
 			if (!signnum(params, i, j))
 			{
-				ft_printf("Error------- pb signnum\n");
+				ft_printf("Error\n");
 				return (0);
 			}
 			j++;
@@ -95,7 +95,7 @@ int	verif_param(char ***params)
 	}
 	if (!same_int(params))
 	{
-		ft_printf("Error---------- same int\n");
+		ft_printf("Error\n");
 		return (0);
 	}
 	return (1);

@@ -93,6 +93,7 @@ static void	algo2a(t_head *a, t_head *b)
 	t_cost	prix;
 
 	prix.cout = 0;
+	prix.elem = NULL;
 	cur = a->first;
 	while (a->first->before->index != 2)
 	{

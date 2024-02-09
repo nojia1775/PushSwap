@@ -93,11 +93,9 @@ int	main(int argc, char **argv)
 	add_to_list(params, a);
 	free_params(params);
 	deux(a, b);
-	aff(a, b, argc - 1);
+	//aff(a, b, argc - 1);
 	algo(a, b);
-	aff(a, b, argc - 1);
-	// pb(a, b);
-	// aff(a, b, argc - 1);
+	//aff(a, b, argc - 1);
 	ft_free(a, b);
 	return (0);
 }
