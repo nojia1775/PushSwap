@@ -69,9 +69,11 @@ void	algo2b(t_head *b, t_head *a)
 	cur = b->first;
 	while (b->first != NULL)
 	{
+		//ft_printf("ooooooooooooo %d %d\n", cur->data, costb(cur, b, a));
 		if (costb(cur, b, a) == 1)
 		{
 			pa(a, b);
+			//aff(a, b, 10);
 			if (b->first != NULL)
 			{
 				cur = b->first;
@@ -79,6 +81,9 @@ void	algo2b(t_head *b, t_head *a)
 			}
 		}
 		else
+		{
 			expb(&prix, &cur, a, b);
+			//aff(a, b, 10);
+		}
 	}
 }

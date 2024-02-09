@@ -85,22 +85,11 @@ void	depb(t_head *b, t_head *a, t_cost *prix)
 {
 	int	mov[2];
 
-	// write(1, "b\n", 2);	
-	// if (!prix->elem)
-	// {
-	// 	// ft_printf("77777777777777777\n");
-	// 	write(1, "a\n", 2);
-	// 	return ;
-	// }
 	if (prix->elem->index >= b->first->before->index / 2 + 1)
 		mov[0] = -ft_abs(prix->elem->index - b->first->before->index)
 			- 1;
 	else
 		mov[0] = prix->elem->index;
-	// printf("INDEX : %d\n", a->first->before->index / 2 + 1);
-	// if (!prix || !prix->elem || !prix->elem->target)
-	// 	return ;
-	// ft_printf("%d index : %d -> %d : index %d\n", prix->elem->data, prix->elem->index, prix->elem->target->data, prix->elem->target->index);
 	if (prix->elem->target->index >= a->first->before->index / 2 + 1)
 		mov[1] = -ft_abs(prix->elem->target->index
 			- a->first->before->index) - 1;

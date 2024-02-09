@@ -20,10 +20,12 @@ void	expb(t_cost *prix, t_stack **cur, t_head *a, t_head *b)
 		prix->elem = *cur;
 	}
 	*cur = (*cur)->next;
+	//ft_printf("AAAAAAAAAAAAAAA b->first = %d\n", b->first->data);
 	if (*cur == b->first)
 	{
 		targetb(b, a);
 		depb(b, a, prix);
+		targetb(b, a);
 		prix->cout = 0;
 		prix->elem = NULL;
 		*cur = b->first;

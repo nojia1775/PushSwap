@@ -97,7 +97,6 @@ static void	algo2a(t_head *a, t_head *b)
 	cur = a->first;
 	while (a->first->before->index != 2)
 	{
-		//ft_printf("OOOOOOOOOOOOOOOO %d", prix.elem->data);
 		if (cost(cur, a, b) == 1)
 		{
 			pb(a, b);
