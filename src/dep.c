@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   dep.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/10 15:07:08 by nadjemia          #+#    #+#             */
+/*   Updated: 2024/02/10 15:24:36 by nadjemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 static void	samepos(t_head *a, t_head *b, int *mov, t_cost *prix)
 {
 	int	i;
-	
+
 	i = 0;
 	while (i++ < thelow(mov[0], mov[1]))
 		rr(a, b);
@@ -80,7 +92,7 @@ void	dep(t_head *a, t_head *b, t_cost *prix)
 	if (prix->elem->target->index >= b->first->before->index / 2 + 1)
 	{
 		mov[1] = -ft_abs(prix->elem->target->index
-			- b->first->before->index) - 1;
+				- b->first->before->index) - 1;
 	}
 	else
 		mov[1] = prix->elem->target->index;

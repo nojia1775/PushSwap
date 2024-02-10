@@ -22,7 +22,6 @@ void	ra(t_head *a, t_head *b, int to_aff)
 	a->first->before->index = a->first->before->before->index + 1;
 	if (to_aff)
 		ft_printf("ra\n");
-	//aff(a, b, 13);
 }
 
 void	rb(t_head *a, t_head *b, int to_aff)
@@ -35,7 +34,6 @@ void	rb(t_head *a, t_head *b, int to_aff)
 	b->first->before->index = b->first->before->before->index + 1;
 	if (to_aff)
 		ft_printf("rb\n");
-	//aff(a, b, 13);
 }
 
 void	rr(t_head *a, t_head *b)
@@ -43,5 +41,4 @@ void	rr(t_head *a, t_head *b)
 	ra(a, b, 0);
 	rb(a, b, 0);
 	ft_printf("rr\n");
-	//aff(a, b, 13);
 }

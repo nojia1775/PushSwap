@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 17:36:01 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/08 10:09:38 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:36:59 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	cost(t_stack *stack, t_head *a, t_head *b)
 	if (stack->target->index > b->first->before->index / 2 + 1)
 	{
 		costb = ft_abs(stack->target->index
-			- b->first->before->index) + 1;
+				- b->first->before->index) + 1;
 		same = 0;
 	}
 	else
@@ -55,13 +55,13 @@ static int	targeting(t_stack *cura, t_stack *curb, t_head *b)
 		if (cura->data > curb->data)
 		{
 			if (ft_abs(cura->data - cura->target->data)
-			> ft_abs(cura->data - curb->data))
+				> ft_abs(cura->data - curb->data))
 				cura->target = curb;
 			else if (cura->data < cura->target->data)
 				cura->target = curb;
 		}
 	}
-	return (0);	
+	return (0);
 }
 
 void	target(t_head *a, t_head *b)
@@ -95,7 +95,7 @@ static void	algo2a(t_head *a, t_head *b)
 	prix.cout = 0;
 	prix.elem = NULL;
 	cur = a->first;
-	while (a->first != NULL/*a->first->before->index != 2*/)
+	while (a->first != NULL)
 	{
 		if (cost(cur, a, b) == 1)
 		{
@@ -104,7 +104,6 @@ static void	algo2a(t_head *a, t_head *b)
 			target(a, b);
 		}
 		else
-
 			expa(&prix, &cur, a, b);
 	}
 }
@@ -131,8 +130,6 @@ void	algo(t_head *a, t_head *b)
 		pb(a, b);
 		trois(a, b);
 	}
-	/*if (a->first->before->index == 2)
-		trois(a, b);*/
 	targetb(b, a);
 	algo2b(b, a);
 	calibrage(a, b);

@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 09:43:53 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/08 09:45:49 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:10:11 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	sameposb(t_head *b, t_head *a, int *mov, t_cost *prix)
 {
 	int	i;
-	
+
 	i = 0;
 	while (i++ < thelow(mov[0], mov[1]))
 		rr(a, b);
@@ -84,7 +84,6 @@ void	depb(t_head *b, t_head *a, t_cost *prix)
 {
 	int	mov[2];
 
-	//ft_printf("elem -> %d, target -> %d\n", prix->elem->data, prix->elem->target->data);
 	if (prix->elem->index >= b->first->before->index / 2 + 1)
 		mov[0] = -ft_abs(prix->elem->index - b->first->before->index)
 			- 1;
@@ -92,10 +91,9 @@ void	depb(t_head *b, t_head *a, t_cost *prix)
 		mov[0] = prix->elem->index;
 	if (prix->elem->target->index >= a->first->before->index / 2 + 1)
 		mov[1] = -ft_abs(prix->elem->target->index
-			- a->first->before->index) - 1;
+				- a->first->before->index) - 1;
 	else
 		mov[1] = prix->elem->target->index;
-	//ft_printf("mov[0] = %d, mov[1] = %d\n", mov[0], mov[1]);
 	if (mov[0] > 0 && mov[1] > 0)
 		sameposb(b, a, mov, prix);
 	else if (mov[0] < 0 && mov[1] < 0)

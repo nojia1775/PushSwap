@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/10 15:08:43 by nadjemia          #+#    #+#             */
+/*   Updated: 2024/02/10 15:08:45 by nadjemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 void	sa(t_head *a, t_head *b, int to_aff)
@@ -21,7 +33,6 @@ void	sa(t_head *a, t_head *b, int to_aff)
 	a->first->index = 0;
 	if (to_aff)
 		ft_printf("sa\n");
-	//aff(a, b, 13);
 }
 
 void	sb(t_head *a, t_head *b, int to_aff)
@@ -45,7 +56,6 @@ void	sb(t_head *a, t_head *b, int to_aff)
 	a->first->index = 0;
 	if (to_aff)
 		ft_printf("sb\n");
-	//aff(a, b, 13);
 }
 
 void	ss(t_head *a, t_head *b)
@@ -53,5 +63,4 @@ void	ss(t_head *a, t_head *b)
 	sa(a, b, 0);
 	sb(a, b, 0);
 	ft_printf("ss\n");
-	//aff(a, b, 13);
 }

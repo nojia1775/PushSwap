@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   add_list.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/10 15:06:16 by nadjemia          #+#    #+#             */
+/*   Updated: 2024/02/10 15:06:18 by nadjemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 t_stack	*get_last(t_head *head)
@@ -28,9 +40,8 @@ void	add_list(int data, t_head *head)
 {
 	t_stack	*new;
 	t_stack	*last;
-	
-	new = malloc(sizeof(t_stack));
 
+	new = malloc(sizeof(t_stack));
 	if (!new)
 		return ;
 	new->data = data;

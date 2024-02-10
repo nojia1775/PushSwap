@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 15:33:24 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/08 15:33:27 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:26:46 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,19 @@ int	ft_abs(int n)
 	return (n);
 }
 
+static int	lil(t_stack *cur, t_stack *stack, t_head *head)
+{
+	while (1)
+	{
+		if (cur->data < stack->data)
+			return (0);
+		cur = cur->next;
+		if (cur == head->first)
+			break ;
+	}
+	return (1);
+}
+
 int	isthelil(t_stack *stack, t_head *head)
 {
 	t_stack	*cur;
@@ -35,14 +48,8 @@ int	isthelil(t_stack *stack, t_head *head)
 	big = head->first->data;
 	cur = head->first;
 	tmp = cur;
-	while (1)
-	{
-		if (cur->data < stack->data)
-			return (0);
-		cur = cur->next;
-		if (cur == head->first)
-			break ;
-	}
+	if (!lil(cur, stack, head))
+		return (0);
 	while (1)
 	{
 		cur = cur->next;

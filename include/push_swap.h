@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 09:36:46 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/08 15:31:53 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:39:48 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct s_stack	t_stack;
 typedef struct s_head	t_head;
 typedef struct s_cost	t_cost;
+typedef struct s_trois	t_trois;
 
 int		verif_param(char ***params);
 void	aff(t_head *a, t_head *b, int size);
@@ -68,8 +69,8 @@ struct	s_cost
 
 struct	s_stack
 {
-	int	data;
-	int	index;
+	int		data;
+	int		index;
 	t_stack	*target;
 	t_stack	*next;
 	t_stack	*before;
@@ -78,6 +79,13 @@ struct	s_stack
 struct	s_head
 {
 	t_stack	*first;
+};
+
+struct	s_trois
+{
+	int	un;
+	int	deux;
+	int	trois;
 };
 
 #endif

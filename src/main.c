@@ -6,12 +6,11 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 15:08:02 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/09 14:15:39 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:30:55 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
 
 static void	deux(t_head *a, t_head *b)
 {
@@ -21,7 +20,6 @@ static void	deux(t_head *a, t_head *b)
 		sa(a, b, 1);
 	exit(0);
 }
-
 
 static t_head	*init_head(void)
 {
@@ -33,7 +31,6 @@ static t_head	*init_head(void)
 	head->first = NULL;
 	return (head);
 }
-
 
 static char	***init_params(int argc, char **argv)
 {
@@ -94,7 +91,6 @@ int	main(int argc, char **argv)
 	free_params(params);
 	deux(a, b);
 	algo(a, b);
-	//aff(a, b, argc - 1);
 	ft_free(a, b);
 	return (0);
 }

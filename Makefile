@@ -5,7 +5,6 @@ CFLAGS = -Wall -Wextra -Werror
 SRCS = src/main.c \
        src/verif_param.c \
        src/add_list.c \
-       src/aff.c \
        src/ft_free.c \
        src/len.c \
        src/push.c \

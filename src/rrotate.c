@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rrotate.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/10 15:08:32 by nadjemia          #+#    #+#             */
+/*   Updated: 2024/02/10 15:08:33 by nadjemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 void	rra(t_head *a, t_head *b, int to_aff)
@@ -10,7 +22,6 @@ void	rra(t_head *a, t_head *b, int to_aff)
 	a->first->index = 0;
 	if (to_aff)
 		ft_printf("rra\n");
-	//aff(a, b, 13);
 }
 
 void	rrb(t_head *a, t_head *b, int to_aff)
@@ -23,7 +34,6 @@ void	rrb(t_head *a, t_head *b, int to_aff)
 	b->first->index = 0;
 	if (to_aff)
 		ft_printf("rrb\n");
-	//aff(a, b, 13);
 }
 
 void	rrr(t_head *a, t_head *b)
@@ -31,5 +41,4 @@ void	rrr(t_head *a, t_head *b)
 	rra(a, b, 0);
 	rrb(a, b, 0);
 	ft_printf("rrr\n");
-	//aff(a, b, 13);
 }

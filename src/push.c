@@ -62,12 +62,12 @@ static void	not_empty(t_head *dest, t_head *src)
 	}
 }
 
- void	pa(t_head *a, t_head *b)
- {
+void	pa(t_head *a, t_head *b)
+{
 	t_stack	*cur;
 
- 	if (b->first == NULL)
- 		return ;
+	if (b->first == NULL)
+		return ;
 	if (!a->first)
 		empty(a, b);
 	else
@@ -82,14 +82,14 @@ static void	not_empty(t_head *dest, t_head *src)
 		cur = cur->next;
 	}
 	ft_printf("pa\n");
- }
+}
 
- void	pb(t_head *a, t_head *b)
- {
+void	pb(t_head *a, t_head *b)
+{
 	t_stack	*cur;
 
- 	if (a->first == NULL)
- 		return ;
+	if (a->first == NULL)
+		return ;
 	if (!b->first)
 		empty(b, a);
 	else
@@ -104,4 +104,4 @@ static void	not_empty(t_head *dest, t_head *src)
 		cur = cur->next;
 	}
 	ft_printf("pb\n");
- }
+}

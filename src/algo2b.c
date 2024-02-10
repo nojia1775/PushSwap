@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 17:36:11 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/08 10:01:02 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:36:13 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ static int	targetingb(t_stack *curb, t_stack *cura, t_head *a)
 		if (curb->data < cura->data)
 		{
 			if (ft_abs(curb->data - curb->target->data)
-			> ft_abs(curb->data - cura->data))
+				> ft_abs(curb->data - cura->data))
 				curb->target = cura;
 			else if (curb->data > curb->target->data)
 				curb->target = cura;
 		}
 	}
-	return (0);	
+	return (0);
 }
 
 void	targetb(t_head *b, t_head *a)
@@ -69,11 +69,9 @@ void	algo2b(t_head *b, t_head *a)
 	cur = b->first;
 	while (b->first != NULL)
 	{
-		//ft_printf("ooooooooooooo %d %d\n", cur->data, costb(cur, b, a));
 		if (costb(cur, b, a) == 1)
 		{
 			pa(a, b);
-			//aff(a, b, 15);
 			if (b->first != NULL)
 			{
 				cur = b->first;
@@ -81,9 +79,6 @@ void	algo2b(t_head *b, t_head *a)
 			}
 		}
 		else
-		{
 			expb(&prix, &cur, a, b);
-			//aff(a, b, 15);
-		}
 	}
 }
