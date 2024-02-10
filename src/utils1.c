@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 15:33:24 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/10 15:26:46 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:43:26 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,6 @@ void	issort(t_head *a, t_head *b)
 		if (cur == a->first->before)
 			break ;
 	}
+	ft_free(a, b);
 	exit(0);
 }

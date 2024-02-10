@@ -6,7 +6,7 @@
 /*   By: nadjemia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 15:08:02 by nadjemia          #+#    #+#             */
-/*   Updated: 2024/02/10 15:30:55 by nadjemia         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:44:47 by nadjemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ static void	deux(t_head *a, t_head *b)
 		return ;
 	if (a->first->data > a->first->next->data)
 		sa(a, b, 1);
+	ft_free(a, b);
 	exit(0);
 }
 
