@@ -27,7 +27,6 @@ void	expb(t_cost *prix, t_stack **cur, t_head *a, t_head *b)
 	{
 		targetb(b, a);
 		depb(b, a, prix);
-		targetb(b, a);
 		prix->cout = 0;
 		prix->elem = NULL;
 		*cur = b->first;

@@ -42,7 +42,7 @@ void	calibrage(t_head *a, t_head *b)
 
 	i = 0;
 	cur = little(a);
-	if (cur->index >= a->first->before->index + 1 / 2)
+	if (cur->index >= a->first->before->index / 2 + 1)
 		while (cur->index != 0)
 			rra(a, b, 1);
 	else

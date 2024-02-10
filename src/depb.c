@@ -23,8 +23,7 @@ static void	sameposb(t_head *b, t_head *a, int *mov, t_cost *prix)
 		pa(a, b);
 	else
 	{
-		i = 0;
-		while (i++ < ft_abs(prix->elem->index - prix->elem->target->index))
+		while (ft_abs(prix->elem->index - prix->elem->target->index))
 		{
 			if (prix->elem->index != 0)
 				rb(a, b, 1);

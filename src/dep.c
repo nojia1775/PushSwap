@@ -11,8 +11,7 @@ static void	samepos(t_head *a, t_head *b, int *mov, t_cost *prix)
 		pb(a, b);
 	else
 	{
-		i = 0;
-		while (i++ < ft_abs(prix->elem->index - prix->elem->target->index))
+		while (ft_abs(prix->elem->index - prix->elem->target->index))
 		{
 			if (prix->elem->index != 0)
 				ra(a, b, 1);
