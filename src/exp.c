@@ -14,11 +14,13 @@
 
 void	expb(t_cost *prix, t_stack **cur, t_head *a, t_head *b)
 {
-	if (prix->cout == 0 || cost(*cur, b, a) < prix->cout)
+	//ft_printf("--------- %d prix %d\n", (*cur)->data, prix->cout);
+	if (prix->cout == 0 || costb(*cur, a, b) < prix->cout)
 	{
-		prix->cout = cost(*cur, b, a);
+		prix->cout = costb(*cur, a, b);
 		prix->elem = *cur;
 	}
+	//ft_printf("--------- %d prix %d elem %d\n", (*cur)->data, prix->cout, prix->elem->data);
 	*cur = (*cur)->next;
 	//ft_printf("AAAAAAAAAAAAAAA b->first = %d\n", b->first->data);
 	if (*cur == b->first)

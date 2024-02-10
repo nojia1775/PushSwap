@@ -73,7 +73,7 @@ void	algo2b(t_head *b, t_head *a)
 		if (costb(cur, b, a) == 1)
 		{
 			pa(a, b);
-			//aff(a, b, 10);
+			//aff(a, b, 15);
 			if (b->first != NULL)
 			{
 				cur = b->first;
@@ -83,7 +83,7 @@ void	algo2b(t_head *b, t_head *a)
 		else
 		{
 			expb(&prix, &cur, a, b);
-			//aff(a, b, 10);
+			//aff(a, b, 15);
 		}
 	}
 }

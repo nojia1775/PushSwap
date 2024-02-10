@@ -50,12 +50,14 @@ int	costb(t_stack *stack, t_head *a, t_head *b)
 	int	costb;
 	int	same;
 
-	(void)a;
 	same = 0;
 	if (stack->index == 0 && stack->target->index == 0)
 		return (1);
-	if (stack->index > b->first->before->index / 2 + 1)
-		costa = ft_abs(stack->index - b->first->before->index + 1);
+	if (stack->index > (b->first->before->index / 2) + 1)
+	{
+		//ft_printf("stack index %d > %d / 2 + 1 -> %d\n", stack->index,b->first->before->index, b->first->before->index / 2 + 1);
+		costa = ft_abs(stack->index - b->first->before->index) + 1;
+	}
 	else
 	{
 		costa = stack->index;
@@ -64,7 +66,7 @@ int	costb(t_stack *stack, t_head *a, t_head *b)
 	if (stack->target->index > a->first->before->index / 2 + 1)
 	{
 		costb = ft_abs(stack->target->index
-			- a->first->before->index + 1);
+			- a->first->before->index) + 1;
 		same = 0;
 	}
 	else

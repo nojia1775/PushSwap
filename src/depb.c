@@ -85,6 +85,7 @@ void	depb(t_head *b, t_head *a, t_cost *prix)
 {
 	int	mov[2];
 
+	//ft_printf("elem -> %d, target -> %d\n", prix->elem->data, prix->elem->target->data);
 	if (prix->elem->index >= b->first->before->index / 2 + 1)
 		mov[0] = -ft_abs(prix->elem->index - b->first->before->index)
 			- 1;
@@ -95,6 +96,7 @@ void	depb(t_head *b, t_head *a, t_cost *prix)
 			- a->first->before->index) - 1;
 	else
 		mov[1] = prix->elem->target->index;
+	//ft_printf("mov[0] = %d, mov[1] = %d\n", mov[0], mov[1]);
 	if (mov[0] > 0 && mov[1] > 0)
 		sameposb(b, a, mov, prix);
 	else if (mov[0] < 0 && mov[1] < 0)
