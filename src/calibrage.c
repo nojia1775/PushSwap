@@ -38,9 +38,7 @@ static t_stack	*little(t_head *head)
 void	calibrage(t_head *a, t_head *b)
 {
 	t_stack	*cur;
-	int		i;
 
-	i = 0;
 	cur = little(a);
 	if (cur->index >= a->first->before->index / 2 + 1)
 		while (cur->index != 0)

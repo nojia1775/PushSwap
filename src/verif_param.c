@@ -72,6 +72,28 @@ static int	signnum(char ***params, int i, int j)
 	return (1);
 }
 
+int	isint(char *str)
+{
+	int	len;
+
+	len = ft_strlen(str);
+	if (len > 11)
+		return (0);
+	if (len == 11 && str[0] != '-')
+		return (0);
+	if (len == 11 && str[0] == '-' && str[1] - '0' > 2)
+		return (0);
+	else if (len == 11 && str[0] == '-' && str[1] == '2')
+		if (ft_atoi(str + 2) > 147483648)
+			return (0);
+	if (len == 10 && str[0] - '0' > 2)
+		return (0);
+	else if (len == 10 && str[0] == '2')
+		if (ft_atoi(str + 1) > 147483647)
+			return (0);
+	return (1);
+}
+
 int	verif_param(char ***params)
 {
 	int		i;
@@ -83,7 +105,7 @@ int	verif_param(char ***params)
 		j = 0;
 		while (params[i][j])
 		{
-			if (!signnum(params, i, j))
+			if (!signnum(params, i, j) || !isint(params[i][j]))
 			{
 				ft_printf("Error\n");
 				return (0);
