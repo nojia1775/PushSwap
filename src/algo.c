@@ -95,7 +95,7 @@ static void	algo2a(t_head *a, t_head *b)
 	prix.cout = 0;
 	prix.elem = NULL;
 	cur = a->first;
-	while (a->first != NULL)
+	while (a->first->before->index != 2/*a->first != NULL*/)
 	{
 		if (cost(cur, a, b) == 1)
 		{
@@ -104,7 +104,11 @@ static void	algo2a(t_head *a, t_head *b)
 			target(a, b);
 		}
 		else
+		{
 			expa(&prix, &cur, a, b);
+			// cur = a->first;
+			// target(a, b);
+		}
 	}
 }
 
@@ -122,7 +126,7 @@ void	algo(t_head *a, t_head *b)
 		{
 			target(a, b);
 			algo2a(a, b);
-			pa(a, b);
+			trois(a, b);
 		}
 	}
 	else if (a->first->before->index == 2)
@@ -132,5 +136,7 @@ void	algo(t_head *a, t_head *b)
 	}
 	targetb(b, a);
 	algo2b(b, a);
+	while (b->first)
+		pa(a, b);
 	calibrage(a, b);
 }

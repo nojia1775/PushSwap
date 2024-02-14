@@ -79,6 +79,13 @@ void	algo2b(t_head *b, t_head *a)
 			}
 		}
 		else
+		{
 			expb(&prix, &cur, a, b);
+			// if (b->first != NULL)
+			// {
+			// 	cur = b->first;
+			// 	targetb(b, a);
+			// }
+		}
 	}
 }

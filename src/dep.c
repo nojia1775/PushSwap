@@ -39,14 +39,13 @@ static void	sameneg(t_head *a, t_head *b, int *mov, t_cost *prix)
 	int	i;
 
 	i = 0;
-	while (i-- > thelow(mov[0], mov[1]))
+	while (i-- > thelow(ft_abs(mov[0]), ft_abs(mov[1])))
 		rrr(a, b);
 	if (prix->elem->index == 0 && prix->elem->target->index == 0)
 		pb(a, b);
 	else
 	{
-		i = 0;
-		while (i++ < ft_abs(prix->elem->index - prix->elem->target->index))
+		while (ft_abs(prix->elem->index - prix->elem->target->index))
 		{
 			if (prix->elem->index != 0)
 				rra(a, b, 1);
