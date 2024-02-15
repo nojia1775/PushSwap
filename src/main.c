@@ -92,6 +92,7 @@ int	main(int argc, char **argv)
 	free_params(params);
 	deux(a, b);
 	algo(a, b);
+	//aff(a, b, 6);
 	ft_free(a, b);
 	return (0);
 }

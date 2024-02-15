@@ -21,7 +21,9 @@ SRCS = src/main.c \
        src/algo2b.c \
        src/depb.c \
        src/exp.c \
-       src/calibrage.c
+       src/calibrage.c \
+       src/aff.c \
+       src/clear_target.c
 
 OBJS = $(SRCS:.c=.o)
 

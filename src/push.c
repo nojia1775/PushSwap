@@ -81,6 +81,7 @@ void	pa(t_head *a, t_head *b)
 		cur->index++;
 		cur = cur->next;
 	}
+	a->first->target = NULL;
 	ft_printf("pa\n");
 }
 
@@ -103,5 +104,6 @@ void	pb(t_head *a, t_head *b)
 		cur->index++;
 		cur = cur->next;
 	}
+	b->first->target = NULL;
 	ft_printf("pb\n");
 }

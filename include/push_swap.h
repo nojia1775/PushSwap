@@ -60,6 +60,7 @@ void	expa(t_cost *prix, t_stack **cur, t_head *a, t_head *b);
 void	calibrage(t_head *a, t_head *b);
 int		costb(t_stack *stack, t_head *a, t_head *b);
 void	add_to_list(char ***params, t_head *a);
+void	clear_target(t_head *head);
 
 struct	s_cost
 {

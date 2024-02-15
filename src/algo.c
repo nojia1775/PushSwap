@@ -105,10 +105,14 @@ static void	algo2a(t_head *a, t_head *b)
 		}
 		else
 		{
+			target(a, b);
 			expa(&prix, &cur, a, b);
 			// cur = a->first;
 			// target(a, b);
 		}
+		clear_target(a);
+		clear_target(b);
+		target(a, b);
 	}
 }
 
@@ -128,11 +132,13 @@ void	algo(t_head *a, t_head *b)
 			algo2a(a, b);
 			trois(a, b);
 		}
+		//aff(a, b, 6);
 	}
 	else if (a->first->before->index == 2)
 	{
 		pb(a, b);
 		trois(a, b);
+		//aff(a, b, 6);
 	}
 	targetb(b, a);
 	algo2b(b, a);
